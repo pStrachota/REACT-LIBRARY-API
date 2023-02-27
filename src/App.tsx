@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import 'mdb-react-ui-kit/dist/css/mdb.min.css'
+import '@fortawesome/fontawesome-free/css/all.min.css'
+import 'primereact/resources/themes/lara-light-indigo/theme.css'  //theme
+import 'primereact/resources/primereact.min.css'                  //core css
+import 'primeicons/primeicons.css'                                //icons
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import './App.css'
+import {BrowserRouter as Router} from 'react-router-dom'
+import {AccountStateContextProvider} from './context/AccountContext'
 
-export default App;
+import 'mdb-react-ui-kit/dist/css/mdb.min.css'
+import '@fortawesome/fontawesome-free/css/all.min.css'
+import {ProSidebarProvider} from 'react-pro-sidebar'
+import { RoutesComponent } from './router/RoutesComponent'
+
+
+export const App = () => (
+	<>
+		<ProSidebarProvider>
+			<AccountStateContextProvider>
+				<Router>
+					<RoutesComponent/>
+				</Router>
+			</AccountStateContextProvider>
+		</ProSidebarProvider>
+	</>
+
+)
