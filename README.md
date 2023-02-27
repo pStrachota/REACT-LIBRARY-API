@@ -22,7 +22,7 @@
 <h3 align="center">REACT FRONT END LIBRARY</h3>
 
   <p align="center">
-    React js frontend build for jakarta EE backend for Fundamentals of Network Applications course in TUL.
+    React js SPA build for jakarta EE backend for Fundamentals of Network Applications course in TUL.
    
   </p>
 </div>
